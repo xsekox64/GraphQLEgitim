@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: graphqlegitim-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: graphqlegitim
+  template:
+    metadata:
+      labels:
+        app: graphqlegitim
+    spec:
+      containers:
+        - name: graphqlegitim
+          image: sekotunaozdemir/graphplegitim:latest
